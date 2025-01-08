@@ -1,0 +1,4 @@
+{{- $id := cond .IsNamedParams (.Get "id") (.Get 0) -}}
+
+<script src="https://asciinema.org/a/{{ $id }}.js" id="asciicast-{{ $id }}" async="true"></script>
+{{- /* EOF */ -}}

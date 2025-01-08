@@ -1,34 +1,27 @@
 <!-- markdownlint-disable-file MD033 MD041 -->
-<h1 align="center">{component-xxx} | FixIt</h1>
-
-<!-- TODO 如有需要，请在此处添加图片 -->
+<h1 align="center">shortcode-asciinema | FixIt</h1>
 
 <div align="center" class="ignore">
-  <p><!-- TODO 如有需要，请在此处添加描述 --></p>
+  <p>一个带有 <code>asciinema-embed</code> shortcode 的 Hugo 主题组件。</p>
   简体中文 |
-  <a href="https://fixit.lruihao.cn/zh-cn/ecosystem/hugo-fixit/{component-xxx}/?lang=chinese_traditional">繁體中文</a> |
+  <a href="https://fixit.lruihao.cn/zh-cn/ecosystem/hugo-fixit/shortcode-asciinema/?lang=chinese_traditional">繁體中文</a> |
   <a href="/README.en.md">English</a> |
-  <a href="https://fixit.lruihao.cn/ecosystem/hugo-fixit/{component-xxx}/?lang=french">Français</a> |
-  <a href="https://fixit.lruihao.cn/ecosystem/hugo-fixit/{component-xxx}/?lang=russian">Русский язык</a> |
-  <a href="https://fixit.lruihao.cn/ecosystem/hugo-fixit/{component-xxx}/?lang=spanish">Español</a> |
-  <a href="https://fixit.lruihao.cn/ecosystem/hugo-fixit/{component-xxx}/?lang=hindi">हिन्दी</a> |
-  <a href="https://fixit.lruihao.cn/ecosystem/hugo-fixit/{component-xxx}/?lang=german">deutsch</a> |
-  <a href="https://fixit.lruihao.cn/ecosystem/hugo-fixit/{component-xxx}/?lang=korean">한국어</a> |
-  <a href="https://fixit.lruihao.cn/ecosystem/hugo-fixit/{component-xxx}/?lang=japanese">しろうと</a>
+  <a href="https://fixit.lruihao.cn/ecosystem/hugo-fixit/shortcode-asciinema/?lang=french">Français</a> |
+  <a href="https://fixit.lruihao.cn/ecosystem/hugo-fixit/shortcode-asciinema/?lang=russian">Русский язык</a> |
+  <a href="https://fixit.lruihao.cn/ecosystem/hugo-fixit/shortcode-asciinema/?lang=spanish">Español</a> |
+  <a href="https://fixit.lruihao.cn/ecosystem/hugo-fixit/shortcode-asciinema/?lang=hindi">हिन्दी</a> |
+  <a href="https://fixit.lruihao.cn/ecosystem/hugo-fixit/shortcode-asciinema/?lang=german">deutsch</a> |
+  <a href="https://fixit.lruihao.cn/ecosystem/hugo-fixit/shortcode-asciinema/?lang=korean">한국어</a> |
+  <a href="https://fixit.lruihao.cn/ecosystem/hugo-fixit/shortcode-asciinema/?lang=japanese">しろうと</a>
 </div>
 
 ## Demo
 
-TODO 如有需要，请在此处添加演示
-
-## 特性
-
-- [ ] Foo
-- [ ] Bar
+[安装主题#CLI | FixIt](https://fixit.lruihao.cn/documentation/installation/#cli)
 
 ## 要求
 
-- FixIt v0.3.12 或更高版本。
+适用于所有 Hugo 主题。
 
 ## 安装组件
 
@@ -45,7 +38,7 @@ TODO 如有需要，请在此处添加演示
   [[module.imports]]
     path = "github.com/hugo-fixit/FixIt"
   [[module.imports]]
-    path = "github.com/hugo-fixit/{component-xxx}"
+    path = "github.com/hugo-fixit/shortcode-asciinema"
 ```
 
 在 Hugo 的第一次启动时，它将下载所需的文件。
@@ -63,44 +56,26 @@ hugo mod tidy
 
 ```bash
 git submodule add https://github.com/hugo-fixit/FixIt.git themes/FixIt
-git submodule add https://github.com/hugo-fixit/{component-xxx}.git themes/{component-xxx}
+git submodule add https://github.com/hugo-fixit/shortcode-asciinema.git themes/shortcode-asciinema
 ```
 
 接下来编辑项目的 `hugo.toml` 并将此主题组件添加到你的主题中：
 
 ```toml
-theme = ["FixIt", "{component-xxx}"]
+theme = ["FixIt", "shortcode-asciinema"]
 ```
-
-## 配置
-
-为了通过 FixIt 主题在 `layouts/partials/custom.html` 文件中开放的 [自定义块](https://fixit.lruihao.cn/references/blocks/) 将 `{component-xxx}.html` 注入到 `custom-assets` 中，你需要填写以下必要配置：
-
-```toml
-[params]
-  [params.customPartials]
-    head = []
-    profile = []
-    aside = []
-    comment = []
-    footer = []
-    widgets = []
-    assets = [
-      "inject/{component-xxx}.html",
-    ]
-    postFooterBefore = []
-    postFooterAfter = []
-```
-
-TODO 如有需要，请在此处添加配置...
 
 ## 使用 Shortcode
 
 以下是一个使用示例：
 
 ```markdown
-{{< shortcode-xxx >}}
+{{< asciinema-embed 697494 >}}
 ```
+
+呈现效果如下：
+
+[![asciicast](https://asciinema.org/a/697494.svg)](https://asciinema.org/a/697494)
 
 ## 参考
 
