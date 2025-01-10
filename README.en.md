@@ -65,6 +65,16 @@ Next edit `hugo.toml` of your project and add this theme component to your theme
 theme = ["FixIt", "shortcode-asciinema"]
 ```
 
+## Record Terminal
+
+You can use the `asciinema` command to record the terminal and upload it to [asciinema.org](https://asciinema.org/).
+
+```bash
+asciinema rec demo.cast
+# press <ctrl-d> or type "exit" when you're done
+asciinema upload demo.cast
+```
+
 ## Use Shortcode
 
 Here is an example of usage:

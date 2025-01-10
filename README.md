@@ -65,6 +65,16 @@ git submodule add https://github.com/hugo-fixit/shortcode-asciinema.git themes/s
 theme = ["FixIt", "shortcode-asciinema"]
 ```
 
+## 记录终端
+
+你可以使用 `asciinema` 命令记录终端并将其上传到 [asciinema.org](https://asciinema.org/)。
+
+```bash
+asciinema rec demo.cast
+# press <ctrl-d> or type "exit" when you're done
+asciinema upload demo.cast
+```
+
 ## 使用 Shortcode
 
 以下是一个使用示例：
